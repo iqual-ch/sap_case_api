@@ -1,0 +1,4 @@
+endpoint_url: ''
+token_uri: ''
+oauth2_client: sap_case_api
+timeout: 30

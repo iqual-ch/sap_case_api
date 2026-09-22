@@ -1,0 +1,19 @@
+{
+  "name": "iqual/sap_case_api",
+  "description": "Submits Drupal webform submissions to the SAP Service Cloud Formular Case Request API.",
+  "type": "drupal-custom-module",
+  "license": "GPL-2.0-or-later",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://github.com/iqual-ch/sap_case_api"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "drupal/core": "^10 || ^11",
+    "drupal/webform": "^6.2",
+    "drupal/oauth2_client": "^4.2",
+    "drupal/key": "^1.17"
+  }
+}

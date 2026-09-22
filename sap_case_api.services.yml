@@ -1,0 +1,18 @@
+services:
+  logger.channel.sap_case_api:
+    parent: logger.channel_base
+    arguments: ['sap_case_api']
+
+  sap_case_api.client:
+    class: Drupal\sap_case_api\CaseApiClient
+    arguments:
+      - '@http_client'
+      - '@oauth2_client.service'
+      - '@config.factory'
+
+  sap_case_api.request_builder:
+    class: Drupal\sap_case_api\CaseRequestBuilder
+    arguments:
+      - '@entity_type.manager'
+      - '@datetime.time'
+      - '@logger.channel.sap_case_api'

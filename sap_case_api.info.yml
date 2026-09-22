@@ -1,0 +1,10 @@
+name: iqual SAP Case API
+description: Submits webform submissions to the SAP Service Cloud Formular Case Request API.
+package: iqual SAP Case API
+type: module
+core_version_requirement: ^10 || ^11
+configure: sap_case_api.settings
+dependencies:
+  - key:key
+  - oauth2_client:oauth2_client
+  - webform:webform

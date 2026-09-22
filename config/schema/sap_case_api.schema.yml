@@ -1,0 +1,39 @@
+sap_case_api.settings:
+  type: config_object
+  label: 'SAP Service Cloud Case API settings'
+  mapping:
+    endpoint_url:
+      type: uri
+      label: 'Endpoint URL'
+    token_uri:
+      type: uri
+      label: 'OAuth2 token URL'
+    oauth2_client:
+      type: string
+      label: 'OAuth2 client configuration entity to authenticate with'
+    timeout:
+      type: integer
+      label: 'Request timeout in seconds'
+
+webform.handler.sap_case_api:
+  type: mapping
+  label: 'SAP Service Cloud case handler settings'
+  mapping:
+    contact_form_variant:
+      type: string
+      label: 'Contact form variant'
+    subject:
+      type: label
+      label: 'Case subject'
+    mapping:
+      type: text
+      label: 'Field mapping'
+    attachment_elements:
+      type: string
+      label: 'Attachment elements'
+    max_attempts:
+      type: integer
+      label: 'Maximum delivery attempts'
+    debug:
+      type: boolean
+      label: 'Log the request payload'

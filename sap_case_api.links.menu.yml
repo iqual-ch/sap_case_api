@@ -1,0 +1,5 @@
+sap_case_api.settings:
+  title: 'SAP Service Cloud Case API'
+  description: 'Configure the connection to the SAP Service Cloud Case API.'
+  route_name: sap_case_api.settings
+  parent: system.admin_config_services

@@ -1,0 +1,7 @@
+sap_case_api.settings:
+  path: '/admin/config/services/sap-case-api'
+  defaults:
+    _form: '\Drupal\sap_case_api\Form\CaseApiSettingsForm'
+    _title: 'SAP Service Cloud Case API'
+  requirements:
+    _permission: 'administer site configuration'
