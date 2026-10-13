@@ -137,6 +137,26 @@ MAPPING;
 
   /**
    * {@inheritdoc}
+   *
+   * Shows which case the form opens, so that forms sharing this handler can be
+   * told apart on the webform's handlers overview.
+   */
+  public function getSummary() {
+    return [
+      '#theme' => 'item_list',
+      '#items' => [
+        $this->t('<strong>Contact form variant:</strong> @variant', [
+          '@variant' => $this->configuration['contact_form_variant'],
+        ]),
+        $this->t('<strong>Subject:</strong> @subject', [
+          '@subject' => $this->configuration['subject'],
+        ]),
+      ],
+    ];
+  }
+
+  /**
+   * {@inheritdoc}
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form['connection_notice'] = [
